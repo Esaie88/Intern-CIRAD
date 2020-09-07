@@ -11,7 +11,7 @@ import org.osgi.service.component.annotations.Component;
 @Component(
 		immediate = true,
 		property = {
-				"ddm.form.field.type.name=ddm-mobile-number"
+				"ddm.form.field.type.name=DDMCategory"
 		},
 		service = DDMFormFieldType.class
 )
@@ -23,6 +23,6 @@ public class CategoryDDMFormFieldType implements DDMFormFieldType {
 
 	public String getName() {
 		//define name for custom field.
-		return "ddm-mobile-number";
+		return "DDMCategory";
 	}
 }

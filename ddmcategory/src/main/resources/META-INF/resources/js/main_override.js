@@ -309,10 +309,10 @@ AUI.add(
 				'required',
 				'showLabel',
 				'type',
-				'customCssClass',
+				'urlPortail',
 				'fieldWidth',
-				'mobileNumberValidationMassage',
-				'mobileNumberRegex'
+				'apiKey',
+				'ontologyName'
 				
 			],
 
@@ -1226,6 +1226,28 @@ AUI.add(
 					type: 'text'
 				},
 				
+				{
+					hiddenAttributes: MAP_HIDDEN_FIELD_ATTRS.DEFAULT,
+					iconClass: 'geolocation',
+					label: 'Place',
+					type: 'text'
+				},
+				
+				{
+					hiddenAttributes: MAP_HIDDEN_FIELD_ATTRS.DEFAULT,
+					iconClass: 'globe',
+					label: 'Geospacial_1',
+					type: 'ddm-geolocation'
+				},
+				
+				{
+					hiddenAttributes: MAP_HIDDEN_FIELD_ATTRS.DEFAULT,
+					iconClass: 'globe',
+					label: 'Geospacial_2',
+					type: 'ddm-geolocation'
+				},
+				
+				
 				
 				{
 					hiddenAttributes: MAP_HIDDEN_FIELD_ATTRS.DEFAULT,
@@ -1233,8 +1255,22 @@ AUI.add(
 					label: 'Category',
 					type: 'text'
 				}
+			
 			],
-
+			
+			
+			//-------------
+			
+			
+			
+			
+			
+			
+			//-------------
+			
+			
+			
+			
 			DDM_TEMPLATE: [
 				{
 					hiddenAttributes: MAP_HIDDEN_FIELD_ATTRS.DEFAULT,

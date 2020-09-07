@@ -1983,98 +1983,97 @@ AUI.add(
 			NAME: 'textarea'
 		});
 		//Create custom field component plugin
-		var regexString = "Gemet"
-		var customFieldHTML = '<input class="form-builder-field-node field-input field-input-text form-control"></input>'
-		var DDMCategory = A.Component.create(
-			{
-				ATTRS: {
-					urlPortail: {
-						value: 'http://agroportal.lirmm.fr/ontologies'
+		var regexString = "hh"
+			var customFieldHTML = '<input name="a" class="bp_form_complete"></input>'
+				//form-builder-field-node field-input field-input-text form-control
+			var DDMCategory = A.Component.create(
+				{
+					ATTRS: {
+						urlPortail: {
+							value: 'http://agroportal.lirmm.fr/ontologies'
+						},
+						/*fieldWidth: {
+							value: 'large'
+						},*/
+						apiKey: {
+							value: '7560431d-cc5c-4e02-9f81-c21bc60e8518'
+						},
+						ontologyName: {
+							value: 'Gemet'
+						},
+						dataType: {
+							value: 'string'
+						},
+						fieldNamespace: {
+							value: 'ddm'
+						}
 					},
-					fieldWidth: {
-						value: 'large'
-					},
-					apiKey: {
-						value: '7560431d-cc5c-4e02-9f81-c21bc60e8518'
-					},
-					ontologieName: {
-						value: 'Gemet'
-					},
-					dataType: {
-						value: 'string'
-					},
-					fieldNamespace: {
-						value: 'ddm'
-					}
-				},
 
-				EXTENDS: A.FormBuilderTextField,
+					EXTENDS: A.FormBuilderTextField,
 
-				NAME: 'text',
+					NAME: 'text',
 
-				prototype: {
-					getHTML: function() {
-						return customFieldHTML;
-					},
-					getPropertyModel: function() {
-						var instance = this;
+					prototype: {
+						getHTML: function() {
+							return customFieldHTML;
+						},
+						getPropertyModel: function() {
+							var instance = this;
 
-						var model = originalGetPropertyModel.call(instance);
+							var model = originalGetPropertyModel.call(instance);
 
-						return model.concat(
-							[
-								{
-									attributeName: 'urlPortail',
-									editor: new A.TextAreaCellEditor(),
-									name: 'URL Portail'
-								},
-								{
-									attributeName: 'apiKey',
-									editor: new A.TextAreaCellEditor({
-										validator: {
-											rules: {
-												value: {
-													required: true,
+							return model.concat(
+								[
+									{
+										attributeName: 'urlPortail',
+										editor: new A.TextAreaCellEditor(),
+										name: 'URL Portail'
+									},
+									{
+										attributeName: 'apiKey',
+										editor: new A.TextAreaCellEditor({
+											validator: {
+												rules: {
+													value: {
+														required: true,
+													}
 												}
 											}
-										}
-									}),
-									name: 'API Key'
-								},
-								{
-									attributeName: 'ontologyName',
-									editor: new A.TextCellEditor({
-										validator: {
-											rules: {
-												value: {
-													required: true,
+										}),
+										name: 'API Key'
+									},
+									{
+										attributeName: 'ontologyName',
+										editor: new A.TextCellEditor({
+											validator: {
+												rules: {
+													value: {
+														required: true,
+													}
 												}
 											}
-										}
-									}),
-									name: 'Ontology Name'
-								},
-								{
-									attributeName: 'fieldWidth',
-									editor: new A.DropDownCellEditor(
-								               {
-								                   options : {
-								                	   large : 'large',
-								                	   medium : 'medium',
-								                	   small : 'small'
-								                   }
-								                  }),
-									name: 'Field Width'
-								}
-							]
-						);
+										}),
+										name: 'Ontology Name'
+									},
+									/*{
+										attributeName: 'fieldWidth',
+										editor: new A.DropDownCellEditor(
+									               {
+									                   options : {
+									                	   large : 'large',
+									                	   medium : 'medium',
+									                	   small : 'small'
+									                   }
+									                  }),
+										name: 'Field Width'
+									}*/
+								]
+							);
+						}
 					}
 				}
-			}
-		);
-		
-		
-
+			);
+			
 		
 		
 		var plugins = [

@@ -6,7 +6,7 @@
 taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %><%@
 taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %><%@
 taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
-
+<script src="js/form_complete.js"></script>
 <liferay-theme:defineObjects />
 
 <portlet:defineObjects />

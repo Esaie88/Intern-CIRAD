@@ -26,6 +26,6 @@ public class CategoryDDMFormFieldValueRenderer extends BaseDDMFormFieldValueRend
 
 	public String getSupportedDDMFormFieldType() {
 		//define custom field type and structure field ftl file should be moble-number.ftl name.
-		return "ddm-mobile-number";
+		return "DDMCategory";
 	}
 }

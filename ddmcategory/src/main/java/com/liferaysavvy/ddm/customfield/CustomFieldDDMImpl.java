@@ -729,13 +729,16 @@ public class CustomFieldDDMImpl implements DDM {
 			jsonObject.put("type", ddmFormField.getType());
 
 			//put all custom field settings attributes in jsonObject
-			if ("ddm-mobile-number".equals(ddmFormField.getType())) {
-				jsonObject.put("customCssClass", ddmFormField.getProperty("customCssClass"));
-				jsonObject.put("fieldWidth", ddmFormField.getProperty("fieldWidth"));
-				jsonObject.put("mobileNumberValidationMassage", ddmFormField.getProperty("mobileNumberValidationMassage"));
-				jsonObject.put("mobileNumberRegex", ddmFormField.getProperty("mobileNumberRegex"));
+			if ("DDMCategory".equals(ddmFormField.getType())) {
+				jsonObject.put("urlPortail", ddmFormField.getProperty("urlPortail"));
+				//jsonObject.put("fieldWidth", ddmFormField.getProperty("fieldWidth"));
+				jsonObject.put("apiKey", ddmFormField.getProperty("apiKey"));
+				jsonObject.put("ontologyName", ddmFormField.getProperty("ontologyName"));
 			}
 
+			
+			
+			
 			addDDMFormFieldLocalizedProperties(
 					jsonObject, ddmFormField, defaultLocale, defaultLocale);
 

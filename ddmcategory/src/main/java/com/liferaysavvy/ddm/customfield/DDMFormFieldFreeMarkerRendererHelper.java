@@ -25,9 +25,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * @author Pedro Queiroz
- */
 @Component(
 	immediate = true, service = DDMFormFieldFreeMarkerRendererHelper.class
 )

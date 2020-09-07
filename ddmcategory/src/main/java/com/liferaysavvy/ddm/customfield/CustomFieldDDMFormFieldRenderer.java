@@ -146,11 +146,11 @@ public class CustomFieldDDMFormFieldRenderer implements DDMFormFieldRenderer {
 				"showLabel", Boolean.toString(ddmFormField.isShowLabel()));
 		fieldContext.put("type", ddmFormField.getType());
 
-		//Add custom field settings attributes
-		fieldContext.put("customCssClass", ddmFormField.getProperty("customCssClass"));
-		fieldContext.put("fieldWidth", ddmFormField.getProperty("fieldWidth"));
-		fieldContext.put("mobileNumberValidationMassage", ddmFormField.getProperty("mobileNumberValidationMassage"));
-		fieldContext.put("mobileNumberRegex", ddmFormField.getProperty("mobileNumberRegex"));
+		//Add custom field settings attributes 
+		fieldContext.put("urlPortail", ddmFormField.getProperty("urlPortail"));
+		//fieldContext.put("fieldWidth", ddmFormField.getProperty("fieldWidth"));
+		fieldContext.put("apiKey", ddmFormField.getProperty("apiKey"));
+		fieldContext.put("ontologyName", ddmFormField.getProperty("ontologyName"));
 	}
 
 	protected int countFieldRepetition(
@@ -649,7 +649,7 @@ public class CustomFieldDDMFormFieldRenderer implements DDMFormFieldRenderer {
 	private static final String _DEFAULT_READ_ONLY_NAMESPACE = "readonly";
 
 	//TODO add custom field types to this list
-	private static final String[] _SUPPORTED_DDM_FORM_FIELD_TYPES = { "ddm-mobile-number" };
+	private static final String[] _SUPPORTED_DDM_FORM_FIELD_TYPES = { "DDMCategory" };
 
 	private static final String _TPL_EXT = ".ftl";
 
